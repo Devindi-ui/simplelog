@@ -11,9 +11,9 @@ const firebaseConfig = {
 };
 
 //initializing firebase
-firebaseConfig.initializeApp(firebaseConfig);
-const auth = firebaseConfig.auth();
-const database = firebaseConfig.database();
+firebase.initializeApp(firebaseConfig);  // ✅ correct
+const auth = firebase.auth();
+const database = firebase.database();
 
 //DOM Elements
 const authContainer = document.getElementById('auth-container');
