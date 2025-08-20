@@ -1,53 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimpleLogin</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Auth container -->
-     <div id="auth-container" class="auth-wrapper">
-        <div class="auth-center-container">
-            <div class="auth-box">
-                <h1>SimpleLogin</h1>
+  <!-- Auth container (required by your JS) -->
+  <div id="auth-container" class="auth-container">
 
-                <div class="auth-form">
-                    <h2>Login</h2>
-                    <input type="email" id="login-email" placeholder="Email">
-                    <input type="password" id="login-password" placeholder="Password">
-                    <button id="login-btn">Login</button>
-                    <p class="auth-toggle">Don't have an account?
-                        <span id="show-signup">Sign up</span>
-                    </p>
-                </div>
+    <!-- Left branding side -->
+    <div class="auth-left">
+      <h1><i class="fas fa-shield-alt"></i> SimpleLogin</h1>
+      <p>Secure your access with a simple and modern login system.</p>
+    </div>
 
-                <div class="auth-form hidden">
-                    <h2>Sign up</h2>
-                    <input type="text" id="signup-name" placeholder="Name">
-                    <input type="text" id="signup-email" placeholder="Email">
-                    <input type="text" id="signup-password" placeholder="Password">.
-                    <button id="signup-btn">Sign up</button>
-                    <p class="auth-toggle">Don't have an account?
-                        <span id="show-login">Login</span>
-                    </p>
-                </div>
-            </div>
+    <!-- Right form side -->
+    <div class="auth-right">
+      
+      <!-- Login form (first-of-type) -->
+      <div class="auth-form" id="login-form">
+        <h2>Login</h2>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="login-email" placeholder="Email">
         </div>
-     </div>
-    
-    
-    <!-- firebase sdk -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-    <!-- chart cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <script src="script/auth.js"></script>
-    
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="login-password" placeholder="Password">
+        </div>
+        <button id="login-btn" class="btn">Login</button>
+        <p class="switch">Don’t have an account? <span id="show-signup">Sign up</span></p>
+      </div>
+
+      <!-- Signup form (last-of-type) -->
+      <div class="auth-form hidden" id="signup-form">
+        <h2>Sign Up</h2>
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="signup-name" placeholder="Name">
+        </div>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="signup-email" placeholder="Email">
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="signup-password" placeholder="Password">
+        </div>
+        <button id="signup-btn" class="btn">Sign Up</button>
+        <p class="switch">Already have an account? <span id="show-login">Login</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <!-- ChartJS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Auth logic -->
+  <script src="script/auth.js"></script>
 </body>
 </html>
