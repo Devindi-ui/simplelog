@@ -24,6 +24,10 @@ body {
   background: linear-gradient(135deg, var(--secondary), var(--primary));
 }
 
+.hidden {
+  display: none !important;
+}
+
 .auth-container {
   display: flex;
   width: 900px;
@@ -65,20 +69,15 @@ body {
   justify-content: center;
   align-items: center;
   padding: 30px;
-  position: relative;
 }
 
-.form-box {
+.auth-form {
   width: 100%;
   max-width: 350px;
   animation: fadeIn 0.6s ease;
 }
 
-.form-box.hidden {
-  display: none;
-}
-
-.form-box h2 {
+.auth-form h2 {
   text-align: center;
   margin-bottom: 25px;
   color: var(--secondary);
