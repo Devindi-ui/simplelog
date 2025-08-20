@@ -69,7 +69,6 @@ signupBtn.addEventListener('click', (e) => {
         });
     })
     .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
         alert(errorMessage);
     })
@@ -92,7 +91,6 @@ loginBtn.addEventListener('click', (e) => {
         document.getElementById('login-password').value = '';
     })
     .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
         alert(errorMessage);
     });
